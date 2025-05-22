@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 500px;
+    margin: 30px auto;
+    border: 1px solid #888;
+    padding: 20px 40px 30px 40px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+    vertical-align: top;
+}
+
+.input-row {
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select,
+textarea {
+    width: 250px;
+    padding: 3px;
+    font-size: 14px;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.input-error {
+    border: 1px solid red;
+}
+
+.radio-group,
+.checkbox-group {
+    display: inline-block;
+    width: 250px;
+}
+
+.submit-btn {
+    margin-left: 105px;
+    padding: 3px 15px;
+}
