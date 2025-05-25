@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Ex1.css">
     <title>Travel reservation form</title>
 </head>
 
@@ -13,34 +14,45 @@
         <br>
         <h1>Travel reservation form</h1>
         <b>* denotes mandatory</b><br>
-        <form>
+        <form id="reservationForm">
             <label for="fullname">Full name*:</label><br>
-            <input type="text" id="fullname" placeholder="FirstName LastName" required><br>
+            <input type="text" id="fullname" name="fullname" placeholder="FirstName LastName" required><br>
+            <span id="fullnameError" class="error"></span><br>
             <label for="email">Email address*:</label><br>
-            <input type="email" id="email" placeholder="EMAIL_ADDRESS" required><br>
+            <input type="email" id="email" name="email" placeholder="EMAIL_ADDRESS" required><br>
+            <span id="emailError" class="error"></span><br>
             <label for="tour">Select Tour Package*:</label><br>
-            <select id="tour" required>
+            <select id="tour" name="tour" required>
+                <option value="">--Select--</option>
                 <option>Goa</option>
                 <option>Kerala</option>
                 <option>Delhi</option>
                 <option>Agra</option>
             </select><br>
+            <span id="tourError" class="error"></span><br>
             <label for="arrival">Arrival date*:</label><br>
-            <input type="date" id="arrival" required><br>
+            <input type="date" id="arrival" name="arrival" required><br>
+            <span id="arrivalError" class="error"></span><br>
             <label for="persons">Number of persons*:</label><br>
-            <input type="number" id="persons" min="1" required><br> What would you want to avail?*:<br>
-            <input type="checkbox" id="boarding"><label for="boarding"> Boarding</label><br>
-            <input type="checkbox" id="fooding"><label for="fooding"> Fooding</label><br>
-            <input type="checkbox" id="sightseeing"><label for="sightseeing"> Sight seeing</label><br>
+            <input type="number" id="persons" name="persons" min="1" required><br>
+            <span id="personsError" class="error"></span><br>
+            What would you want to avail?*:<br>
+            <input type="checkbox" id="boarding" name="services" value="Boarding"><label for="boarding"> Boarding</label><br>
+            <input type="checkbox" id="fooding" name="services" value="Fooding"><label for="fooding"> Fooding</label><br>
+            <input type="checkbox" id="sightseeing" name="services" value="Sight seeing"><label for="sightseeing"> Sight seeing</label><br>
+            <span id="servicesError" class="error"></span><br>
             <label for="coupon">Discount Coupon code:</label><br>
-            <input type="text" id="coupon"><br> Terms and conditions*<br>
-            <input type="radio" id="agree" name="terms" required>
+            <input type="text" id="coupon" name="coupon"><br>
+            Terms and conditions*<br>
+            <input type="radio" id="agree" name="terms" value="I agree" required>
             <label for="agree">I agree</label>
-            <input type="radio" id="disagree" name="terms" required>
+            <input type="radio" id="disagree" name="terms" value="I disagree">
             <label for="disagree">I disagree</label><br>
+            <span id="termsError" class="error"></span><br>
             <button type="submit">Complete reservation</button>
         </form>
     </div>
+    <script src="./script/Ex1html.js"></script>
 </body>
 
 </html>
