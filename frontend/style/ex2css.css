@@ -139,9 +139,12 @@
             background: #fbbf24;
             color: #92400e;
         }
-        
-        .menu>li:hover .submenu,
+        /* .menu>li:hover .submenu,
         .menu>li:focus-within .submenu {
+            display: block;
+        } */
+        
+        .menu>li.open>.submenu {
             display: block;
         }
         
