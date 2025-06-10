@@ -53,14 +53,12 @@ tr.total-row td {
 }
 
 .profit {
-    color: #006400;
-    font-weight: bold;
+    color: #0040ff;
 }
 
 .loss,
 .negative {
-    color: #c00;
-    font-weight: bold;
+    color: rgb(241, 61, 61);
 }
 
 .footer-row td {
@@ -69,13 +67,11 @@ tr.total-row td {
 }
 
 .positive {
-    color: #006400;
-    font-weight: bold;
+    color: #0040ff;
 }
 
 .blue-link {
     color: #0040ff;
-    text-decoration: underline;
     font-size: 16px;
     margin: 8px 0;
     display: inline-block;
