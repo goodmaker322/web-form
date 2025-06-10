@@ -28,8 +28,8 @@
             </div>
         </div>
         <ul class="menu">
-            <li>
-                <a href="#">THAM SỐ <span class="arrow"></span></a>
+            <li class="has-submenu">
+                <a href="#" class="transfer-button">THAM SỐ </a>
                 <ul class="submenu">
                     <li><a href="#">Option 1</a></li>
                     <li><a href="#">Option 2</a></li>
@@ -38,8 +38,8 @@
                     <li><a href="#">Option 5</a></li>
                 </ul>
             </li>
-            <li>
-                <a href="#">GIAO DỊCH <span class="arrow"></span></a>
+            <li class="has-submenu">
+                <a href="#" class="transfer-button">GIAO DỊCH </a>
                 <ul class="submenu">
                     <li><a href="#">Option 1</a></li>
                     <li><a href="#">Option 2</a></li>
@@ -48,8 +48,8 @@
                     <li><a href="#">Option 5</a></li>
                 </ul>
             </li>
-            <li>
-                <a href="#">TRANSFER <span class="arrow"></span></a>
+            <li class="has-submenu">
+                <a href="#" class="transfer-button">TRANSFER</a>
                 <ul class="submenu">
                     <li><a href="#">Option 1</a></li>
                     <li><a href="#">Option 2</a></li>
@@ -58,8 +58,8 @@
                     <li><a href="#">Option 5</a></li>
                 </ul>
             </li>
-            <li>
-                <a href="#">TRA CỨU <span class="arrow"></span></a>
+            <li class="has-submenu">
+                <a href="#" class="transfer-button">TRA CỨU </a>
                 <ul class="submenu">
                     <li><a href="#">Option 1</a></li>
                     <li><a href="#">Option 2</a></li>
@@ -68,8 +68,8 @@
                     <li><a href="#">Option 5</a></li>
                 </ul>
             </li>
-            <li>
-                <a href="#">PHÍ VSD <span class="arrow"></span></a>
+            <li class="has-submenu">
+                <a href="#" class="transfer-button">PHÍ VSD </a>
                 <ul class="submenu">
                     <li><a href="#">Tra cứu phí QLVT</a></li>
                     <li><a href="#">Tra cứu phí QLVT tổng hợp</a></li>
@@ -80,8 +80,8 @@
                     <li><a href="#">Danh sách KH nên rút D.VSD</a></li>
                 </ul>
             </li>
-            <li>
-                <a href="#">CUỐI NGÀY <span class="arrow"></span></a>
+            <li class="has-submenu">
+                <a href="#" class="transfer-button">CUỐI NGÀY </a>
                 <ul class="submenu">
                     <li><a href="#">Option 1</a></li>
                     <li><a href="#">Option 2</a></li>
@@ -90,8 +90,8 @@
                     <li><a href="#">Option 5</a></li>
                 </ul>
             </li>
-            <li>
-                <a href="#">VSD GATEWAY <span class="arrow"></span></a>
+            <li class="has-submenu">
+                <a href="#" class="transfer-button">VSD GATEWAY </a>
                 <ul class="submenu">
                     <li><a href="#">Option 1</a></li>
                     <li><a href="#">Option 2</a></li>
@@ -100,8 +100,8 @@
                     <li><a href="#">Option 5</a></li>
                 </ul>
             </li>
-            <li>
-                <a href="#">TIỆN ÍCH KHÁC <span class="arrow"></span></a>
+            <li class="has-submenu">
+                <a href="#" class="transfer-button">TIỆN ÍCH KHÁC </a>
                 <ul class="submenu">
                     <li><a href="#">Option 1</a></li>
                     <li><a href="#">Option 2</a></li>
@@ -110,6 +110,7 @@
                     <li><a href="#">Option 5</a></li>
                 </ul>
             </li>
+            <li></li>
         </ul>
         <div class="breadcrumb">
             Internal Portal &gt; EzFuture
@@ -125,37 +126,7 @@
             <span><a href="#">Fpt Securities</a></span>
         </div>
     </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const menuItems = document.querySelectorAll(".menu > li");
-
-            menuItems.forEach(item => {
-                const submenu = item.querySelector(".submenu");
-                const link = item.querySelector("a");
-
-                if (submenu) {
-                    link.addEventListener("click", function(e) {
-                        e.preventDefault(); // Ngăn điều hướng link
-
-                        // Đóng các menu khác
-                        menuItems.forEach(i => {
-                            if (i !== item) i.classList.remove("open");
-                        });
-
-                        // Toggle mở/đóng menu con
-                        item.classList.toggle("open");
-                    });
-                }
-            });
-
-            // Đóng menu khi click ra ngoài
-            document.addEventListener("click", function(e) {
-                if (!e.target.closest(".menu")) {
-                    menuItems.forEach(item => item.classList.remove("open"));
-                }
-            });
-        });
-    </script>
+    <script src="./script/Ex2css.js"></script>
 
 </body>
 

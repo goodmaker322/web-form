@@ -61,7 +61,7 @@
         
         .menu {
             display: flex;
-            background: #d97706;
+            background: #E67300;
             margin-top: 20px;
             border-radius: 2px 2px 0 0;
             overflow: visible;
@@ -71,7 +71,7 @@
         .menu>li {
             position: relative;
             list-style: none;
-            border-right: 1px solid #fff3;
+            border-right: 2px solid rgb(255, 255, 255);
         }
         
         .menu>li:last-child {
@@ -80,25 +80,39 @@
         
         .menu>li>a {
             display: flex;
+            white-space: nowrap;
             align-items: center;
-            padding: 16px 24px 16px 18px;
+            padding: 25px 25px 25px 10px;
             color: #fff;
             text-decoration: none;
-            font-weight: bold;
             transition: background 0.2s;
             position: relative;
             font-size: 15px;
         }
+        /* .menu>li.has-submenu>a::after {
+            content: "▼";
+            margin-left: 6px;
+            font-size: 10px;
+        } */
         
-        .menu>li>a .arrow {
-            margin-left: 8px;
-            border: solid #fff;
-            border-width: 0 2px 2px 0;
-            display: inline-block;
-            padding: 3px;
-            transform: rotate(45deg);
-            -webkit-transform: rotate(45deg);
-            margin-top: 2px;
+        .transfer-button::after {
+            content: '▼';
+            position: absolute;
+            right: 10px;
+            bottom: 5px;
+            font-size: 7px;
+            color: white;
+        }
+        
+        .submenu {
+            display: none;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            position: absolute;
+            width: 150px;
         }
         
         .menu>li:hover>a,
@@ -107,7 +121,7 @@
         }
         
         .menu>li.active>a {
-            background: #92400e;
+            background: #CC6600;
         }
         
         .submenu {
@@ -116,7 +130,7 @@
             left: 0;
             top: 100%;
             min-width: 220px;
-            background: #d97706;
+            background: #CC6600;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
             z-index: 10;
             padding-left: 0;
@@ -136,8 +150,9 @@
         }
         
         .submenu a:hover {
-            background: #fbbf24;
-            color: #92400e;
+            background: #E67300;
+            ;
+            color: #faf9f9;
         }
         /* .menu>li:hover .submenu,
         .menu>li:focus-within .submenu {
@@ -159,7 +174,7 @@
             border-radius: 3px;
             margin-top: 8px;
             padding: 0;
-            min-height: 350px;
+            min-height: 550px;
             background: #fff;
             position: relative;
         }
